@@ -15,7 +15,7 @@ def bfs(graph,start_node):
     
     return visited
 
-print("---Build Tour Graph---")
+print("---Build Your Graph---")
 student_graph = {}
 
 num_edges = int(input("How many edges (connection) does your graph has ?"))
