@@ -58,4 +58,3 @@ best_position,best_value = hill_climbing(start, step_size, max_iterations)
 
 print("\nBest Position =",best_position)
 print("Maximum Value =",best_value)
-
