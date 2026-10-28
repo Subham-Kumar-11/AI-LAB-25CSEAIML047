@@ -4,13 +4,6 @@ This repository contains the complete laboratory experiments, source code, and v
 
 ---
 
-## 📌 Student Details
-- **Student Name / Registration**: `25CSEAIML047`
-- **Department**: Computer Science and Engineering (AI & ML)
-- **Repository URL**: [https://github.com/Subham-Kumar-11/AI-LAB-25CSEAIML047](https://github.com/Subham-Kumar-11/AI-LAB-25CSEAIML047)
-
----
-
 ## 📚 List of Experiments
 
 | Exp No. | Experiment Title | Algorithm / Topic | Source Code | Output Document |
@@ -51,40 +44,4 @@ python A-Star.py
 
 # Run Block World Problem
 python Block_World_Problem.py
-```
-
----
-
-## 📂 Repository Structure
-
-```
-AI-LAB-25CSEAIML047/
-├── 8_Queen.py                      # 8-Queens Problem using Backtracking
-├── A-Star.py                       # A* Search Algorithm
-├── Alpha_Beta_Pruning_Function.py  # Alpha-Beta Pruning Algorithm
-├── BFS.py                          # Breadth-First Search
-├── Block_World_Problem.py          # Block World Problem using BFS
-├── DFS.py                          # Depth-First Search
-├── DLS_UCS.py                      # Depth Limited Search & Uniform Cost Search
-├── Hill_Climbing.py                # Hill Climbing Algorithm
-├── Min_Max_Algorithm.py            # Minimax Algorithm
-├── Tic_Tac_Toe.py                  # Tic-Tac-Toe Game
-├── Travel_Space.py                 # Travelling Salesperson Problem
-├── Water_jug.py                    # Water Jug Problem using BFS
-├── EXPERIMENT_OUTPUTS.txt          # Consolidated outputs of all 12 experiments
-├── README.md                       # Repository documentation and experiment index
-├── .gitignore                      # Python bytecode and ignore rules
-└── outputs/                        # Individual experiment outputs in text format
-    ├── 01_Water_jug_output.txt
-    ├── 02_Tic_Tac_Toe_output.txt
-    ├── 03_Travel_Space_output.txt
-    ├── 04_Block_World_Problem_output.txt
-    ├── 05_DLS_UCS_output.txt
-    ├── 06_BFS_output.txt
-    ├── 07_DFS_output.txt
-    ├── 08_A_Star_output.txt
-    ├── 09_8_Queen_output.txt
-    ├── 10_Hill_Climbing_output.txt
-    ├── 11_Min_Max_Algorithm_output.txt
-    └── 12_Alpha_Beta_Pruning_output.txt
 ```
