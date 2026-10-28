@@ -1,0 +1,80 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Depth Limited Search (DLS) & Uniform Cost Search (UCS)
+File: DLS_UCS.py
+Algorithms:
+  1. Depth Limited Search (DLS) - Uninformed search with predefined depth bound
+  2. Uniform Cost Search (UCS)  - Optimal graph search using priority queue / min-heap
+================================================================================
+
+[PART 1: DEPTH LIMITED SEARCH]
+--- INPUT DATA ---
+Number of nodes: 5 (0, 1, 2, 3, 4)
+Number of edges: 5
+Edges:
+  0 - 1
+  0 - 2
+  1 - 3
+  2 - 4
+  3 - 4
+Start Node : 0
+Goal Node  : 4
+Depth Limit: 2
+
+--- DLS EXECUTION OUTPUT ---
+===== DEPTH LIMITED SEARCH =====
+Enter number of nodes: 5
+Enter number of edges: 5
+Enter edges (source destination):
+0 1
+0 2
+1 3
+2 4
+3 4
+Enter starting node: 0
+Enter goal node: 4
+Enter depth limit: 2
+
+Goal Found!
+Path: 0 -> 2 -> 4
+Depth: 2
+
+--------------------------------------------------------------------------------
+
+[PART 2: UNIFORM COST SEARCH]
+--- INPUT DATA ---
+Number of nodes: 5 (0, 1, 2, 3, 4)
+Number of edges: 5
+Edges with Costs (source destination cost):
+  0 - 1 (cost: 2)
+  0 - 2 (cost: 5)
+  1 - 3 (cost: 1)
+  2 - 4 (cost: 2)
+  3 - 4 (cost: 1)
+Start Node : 0
+Goal Node  : 4
+
+--- UCS EXECUTION OUTPUT ---
+===== UNIFORM COST SEARCH =====
+Enter number of nodes: 5
+Enter number of edges: 5
+Enter edges as:
+source destination cost
+0 1 2
+0 2 5
+1 3 1
+2 4 2
+3 4 1
+Enter starting node: 0
+Enter goal node: 4
+
+Goal Found!
+Optimal Path: 0 -> 1 -> 3 -> 4
+Minimum Cost: 4
+
+================================================================================
+Summary:
+- DLS finds the path (0 -> 2 -> 4) within depth limit 2.
+- UCS evaluates path costs and finds the lowest-cost path (0 -> 1 -> 3 -> 4) with cost 4.
+================================================================================

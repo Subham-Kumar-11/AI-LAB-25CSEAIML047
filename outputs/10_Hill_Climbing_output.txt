@@ -1,0 +1,39 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Hill Climbing Algorithm
+File: Hill_Climbing.py
+Algorithm: Local Search / Optimization
+Description: Maximizes an objective function f(x) = -(x^2) + 10 iteratively
+             by evaluating left and right neighboring states and stepping toward
+             the direction of higher value.
+================================================================================
+
+--- INPUT DATA ---
+Objective Function: f(x) = -(x^2) + 10
+Starting Value (x0): 5.0
+Step Size          : 0.5
+Maximum Iterations : 20
+
+--- EXECUTION OUTPUT ---
+Enter the starting value: 5.0
+Enter the step size: 0.5
+Enter maximum iterations: 20
+
+Best Position = 0.0
+Maximum Value = 10.0
+
+================================================================================
+Convergence Trace:
+Iteration 0: x = 5.0  -> f(x) = -15.0
+Iteration 1: x = 4.5  -> f(x) = -10.25
+Iteration 2: x = 4.0  -> f(x) = -6.0
+Iteration 3: x = 3.5  -> f(x) = -2.25
+Iteration 4: x = 3.0  -> f(x) = 1.0
+Iteration 5: x = 2.5  -> f(x) = 3.75
+Iteration 6: x = 2.0  -> f(x) = 6.0
+Iteration 7: x = 1.5  -> f(x) = 7.75
+Iteration 8: x = 1.0  -> f(x) = 9.0
+Iteration 9: x = 0.5  -> f(x) = 9.75
+Iteration 10: x = 0.0 -> f(x) = 10.0 (Global maximum reached)
+================================================================================

@@ -1,0 +1,500 @@
+====================================================================================================
+               ARTIFICIAL INTELLIGENCE LABORATORY (AI LAB)
+                     RECORD OF EXPERIMENT OUTPUTS
+====================================================================================================
+Student Registration : 25CSEAIML047
+Repository Name      : AI-LAB-25CSEAIML047
+Repository URL       : https://github.com/Subham-Kumar-11/AI-LAB-25CSEAIML047.git
+====================================================================================================
+
+TABLE OF CONTENTS
+----------------------------------------------------------------------------------------------------
+Experiment 01: Water Jug Problem using BFS ............................. [Water_jug.py]
+Experiment 02: Tic-Tac-Toe Game ........................................ [Tic_Tac_Toe.py]
+Experiment 03: Travelling Salesperson Problem (TSP) .................... [Travel_Space.py]
+Experiment 04: Block World Problem using BFS ........................... [Block_World_Problem.py]
+Experiment 05: Depth Limited Search (DLS) & Uniform Cost Search (UCS) .. [DLS_UCS.py]
+Experiment 06: Breadth-First Search (BFS) .............................. [BFS.py]
+Experiment 07: Depth-First Search (DFS) ................................ [DFS.py]
+Experiment 08: A* Search Algorithm ..................................... [A-Star.py]
+Experiment 09: 8-Queens Problem using Backtracking ..................... [8_Queen.py]
+Experiment 10: Hill Climbing Algorithm ................................. [Hill_Climbing.py]
+Experiment 11: Minimax Algorithm ....................................... [Min_Max_Algorithm.py]
+Experiment 12: Alpha-Beta Pruning Algorithm ............................ [Alpha_Beta_Pruning_Function.py]
+====================================================================================================
+
+
+====================================================================================================
+EXPERIMENT 01: WATER JUG PROBLEM USING BFS
+Source File: Water_jug.py
+====================================================================================================
+Problem Statement:
+Given a 4-liter jug and a 3-liter jug with neither having any measuring marks, find a sequence
+of steps to achieve exactly 2 liters of water in the 3-liter jug (target state: (4, 2)).
+
+Input Parameters:
+- Capacity of Jug 1 : 4 Liters
+- Capacity of Jug 2 : 3 Liters
+- Initial State     : (0, 0)
+- Goal State        : (4, 2)
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Steps to reach target state (4, 2):
+(0, 0)
+(0, 3)
+(3, 0)
+(3, 3)
+(4, 2)
+----------------------------------------------------------------------------------------------------
+Analysis:
+1. Start with both jugs empty: (0, 0)
+2. Fill Jug 2 (3L) to capacity: (0, 3)
+3. Transfer all 3L from Jug 2 into Jug 1: (3, 0)
+4. Fill Jug 2 (3L) again: (3, 3)
+5. Pour water from Jug 2 into Jug 1 until Jug 1 is full (4L). Jug 2 is left with exactly 2L: (4, 2)
+
+
+====================================================================================================
+EXPERIMENT 02: TIC-TAC-TOE GAME
+Source File: Tic_Tac_Toe.py
+====================================================================================================
+Problem Statement:
+Implement a 3x3 turn-based Tic-Tac-Toe game between two players ('X' and 'O') with automated
+win condition detection (rows, columns, diagonals) and draw state handling.
+
+Input Moves Sequence:
+- Turn 1 (Player X): Row 0, Column 0
+- Turn 2 (Player O): Row 1, Column 0
+- Turn 3 (Player X): Row 0, Column 1
+- Turn 4 (Player O): Row 1, Column 1
+- Turn 5 (Player X): Row 0, Column 2
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Player X's turn:
+  |   |  
+---------
+  |   |  
+---------
+  |   |  
+---------
+Enter row (0-2): 0
+Enter column (0-2): 0
+
+Player O's turn:
+X |   |  
+---------
+  |   |  
+---------
+  |   |  
+---------
+Enter row (0-2): 1
+Enter column (0-2): 0
+
+Player X's turn:
+X |   |  
+---------
+O |   |  
+---------
+  |   |  
+---------
+Enter row (0-2): 0
+Enter column (0-2): 1
+
+Player O's turn:
+X | X |  
+---------
+O |   |  
+---------
+  |   |  
+---------
+Enter row (0-2): 1
+Enter column (0-2): 1
+
+Player X's turn:
+X | X |  
+---------
+O | O |  
+---------
+  |   |  
+---------
+Enter row (0-2): 0
+Enter column (0-2): 2
+
+X | X | X
+---------
+O | O |  
+---------
+  |   |  
+---------
+
+Player X wins!
+----------------------------------------------------------------------------------------------------
+Analysis:
+Player X successfully occupies cells (0,0), (0,1), and (0,2), completing the top row and winning.
+
+
+====================================================================================================
+EXPERIMENT 03: TRAVELLING SALESPERSON PROBLEM (TSP)
+Source File: Travel_Space.py
+====================================================================================================
+Problem Statement:
+Given a set of cities and pairwise travel costs between them, find the minimum cost Hamiltonian
+cycle that visits every city exactly once and returns to the starting origin city.
+
+Input Cost Matrix:
+       City 0   City 1   City 2   City 3
+City 0    0       10       15       20
+City 1   10        0       35       25
+City 2   15       35        0       30
+City 3   20       25       30        0
+Starting City: 0
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Enter the number of cities: 4
+Enter the cost matrix: 
+0 10 15 20
+10 0 35 25
+15 35 0 30
+20 25 30 0
+Enter the starting city (0 to 3): 0
+
+Optimal path: 0->1->3->2->0
+Optimal cost: 80
+----------------------------------------------------------------------------------------------------
+Analysis:
+Tour Cost = Cost(0,1) + Cost(1,3) + Cost(3,2) + Cost(2,0)
+          = 10 + 25 + 30 + 15 = 80.
+
+
+====================================================================================================
+EXPERIMENT 04: BLOCK WORLD PROBLEM USING BFS
+Source File: Block_World_Problem.py
+====================================================================================================
+Problem Statement:
+Given an initial state of blocks on a table or stacked upon each other, compute the shortest sequence
+of valid moves to reach a goal configuration using Breadth-First Search (BFS).
+
+Input Configuration:
+- Blocks: A, B, C
+- Initial State: All blocks on the Table
+- Goal State: C stacked on B, and B stacked on A, with A on the Table
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+===== BLOCK WORLD PROBLEM =====
+Enter number of blocks: 3
+
+Enter block names:
+Block 1: A
+Block 2: B
+Block 3: C
+
+===== INITIAL STATE =====
+Enter the position of each block.
+Enter 'Table' if the block is on the table.
+Where is A initially? Table
+Where is B initially? Table
+Where is C initially? Table
+
+===== GOAL STATE =====
+Enter the desired position of each block.
+Where should A be in the goal state? Table
+Where should B be in the goal state? A
+Where should C be in the goal state? B
+
+Initial State:
+A -> Table
+B -> Table
+C -> Table
+
+Goal State:
+A -> Table
+B -> A
+C -> B
+
+===== SOLUTION =====
+Step 1: Move B from Table to A
+Step 2: Move C from Table to B
+
+Total moves: 2
+----------------------------------------------------------------------------------------------------
+Analysis:
+BFS explores state spaces level-by-level, returning the minimum-step solution of 2 moves.
+
+
+====================================================================================================
+EXPERIMENT 05: DEPTH LIMITED SEARCH (DLS) & UNIFORM COST SEARCH (UCS)
+Source File: DLS_UCS.py
+====================================================================================================
+Problem Statement:
+Implement and demonstrate:
+1. Depth Limited Search (DLS) to prune search depth and avoid infinite loops.
+2. Uniform Cost Search (UCS) to find the lowest-cost path on a weighted graph using a priority queue.
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+===== DEPTH LIMITED SEARCH =====
+Enter number of nodes: 5
+Enter number of edges: 5
+Enter edges (source destination):
+0 1
+0 2
+1 3
+2 4
+3 4
+Enter starting node: 0
+Enter goal node: 4
+Enter depth limit: 2
+
+Goal Found!
+Path: 0 -> 2 -> 4
+Depth: 2
+
+===== UNIFORM COST SEARCH =====
+Enter number of nodes: 5
+Enter number of edges: 5
+Enter edges as:
+source destination cost
+0 1 2
+0 2 5
+1 3 1
+2 4 2
+3 4 1
+Enter starting node: 0
+Enter goal node: 4
+
+Goal Found!
+Optimal Path: 0 -> 1 -> 3 -> 4
+Minimum Cost: 4
+----------------------------------------------------------------------------------------------------
+Analysis:
+- DLS finds a path of length 2 within the specified depth limit.
+- UCS evaluates actual edge weights and identifies 0 -> 1 -> 3 -> 4 (total cost = 2+1+1 = 4)
+  as the cheapest path over 0 -> 2 -> 4 (cost = 5+2 = 7).
+
+
+====================================================================================================
+EXPERIMENT 06: BREADTH-FIRST SEARCH (BFS)
+Source File: BFS.py
+====================================================================================================
+Problem Statement:
+Perform level-order traversal on a user-defined graph using Breadth-First Search with a FIFO queue.
+
+Input Graph:
+Edges: A-B, A-C, B-D, B-E, C-F
+Starting Node: A
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+---Build Your Graph---
+How many edges (connection) does your graph has ? 5
+Enter each edge separated by a spacce(e.g., A B):
+Edge 1: A B
+Edge 2: A C
+Edge 3: B D
+Edge 4: B E
+Edge 5: C F
+Enter the starting node for BFS: A
+
+Your Graph Dictionary: {'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'], 'D': ['B'], 'E': ['B'], 'F': ['C']}
+Staring BFS Traversal...
+Exploring node1: A
+Exploring node1: B
+Exploring node1: C
+Exploring node1: D
+Exploring node1: E
+Exploring node1: F
+BFS traversal order: ['A', 'B', 'C', 'D', 'E', 'F']
+----------------------------------------------------------------------------------------------------
+Analysis:
+All nodes at depth 1 (B, C) are explored before moving to nodes at depth 2 (D, E, F).
+
+
+====================================================================================================
+EXPERIMENT 07: DEPTH-FIRST SEARCH (DFS)
+Source File: DFS.py
+====================================================================================================
+Problem Statement:
+Perform depth-first traversal on a user-defined graph using a LIFO stack.
+
+Input Graph:
+Edges: A-B, A-C, B-D, B-E, C-F
+Starting Node: A
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+---Build Your Graph---
+How many edges (connection) does your graph has ? 5
+Enter each edge separated by a spacce(e.g., A B):
+Edge 1: A B
+Edge 2: A C
+Edge 3: B D
+Edge 4: B E
+Edge 5: C F
+Enter the starting node for DFS: A
+
+Your Graph Dictionary: {'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'], 'D': ['B'], 'E': ['B'], 'F': ['C']}
+Staring DFS Traversal...
+Exploring node1: A
+Exploring node1: C
+Exploring node1: F
+Exploring node1: B
+Exploring node1: E
+Exploring node1: D
+DFS traversal order: ['A', 'C', 'F', 'B', 'E', 'D']
+----------------------------------------------------------------------------------------------------
+Analysis:
+DFS traverses deeply down one branch (A -> C -> F) to a dead end before backtracking to branch B.
+
+
+====================================================================================================
+EXPERIMENT 08: A* SEARCH ALGORITHM
+Source File: A-Star.py
+====================================================================================================
+Problem Statement:
+Find the optimal shortest path between a start node and a goal node on a directed weighted graph
+using the evaluation function f(n) = g(n) + h(n).
+
+Input Data:
+- Heuristics: S: 7, A: 6, B: 2, C: 1, G: 0
+- Edges: S->A (1), S->B (4), A->B (2), A->C (5), B->C (2), C->G (3)
+- Start: S, Goal: G
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+=== A* Algorithm Input Setup ===
+
+Enter total number of nodes: 5
+
+Enter Heuristic value h(n) for each node: 
+  Node name:   S
+  Heuristic h(S):    7
+  Node name:   A
+  Heuristic h(A):    6
+  Node name:   B
+  Heuristic h(B):    2
+  Node name:   C
+  Heuristic h(C):    1
+  Node name:   G
+  Heuristic h(G):    0
+
+Enter total number of directed edges: 6
+
+Enter edges in format(from_node to_node weight)
+    Edge 1:    S A 1
+    Edge 2:    S B 4
+    Edge 3:    A B 2
+    Edge 4:    A C 5
+    Edge 5:    B C 2
+    Edge 6:    C G 3
+
+--- Path Finding ---
+Enter Start Node: S
+Enter Goal Node: G
+Shortest Path: S -> A -> B -> C -> G
+Total Path Cost: 8.0
+----------------------------------------------------------------------------------------------------
+Analysis:
+A* combines path cost g(n) with heuristic h(n) to guarantee optimal path: S -> A -> B -> C -> G (Cost: 8.0).
+
+
+====================================================================================================
+EXPERIMENT 09: 8-QUEENS PROBLEM USING BACKTRACKING
+Source File: 8_Queen.py
+====================================================================================================
+Problem Statement:
+Place 8 non-attacking queens on an 8x8 chessboard using recursive backtracking.
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Solution for 8-Queens Problem:
+
+Q . . . . . . .
+. . . . Q . . .
+. . . . . . . Q
+. . . . . Q . .
+. . Q . . . . .
+. . . . . . Q .
+. Q . . . . . .
+. . . Q . . . .
+----------------------------------------------------------------------------------------------------
+Analysis:
+Row positions for queens across columns 0 to 7:
+Col 0: Row 0 | Col 1: Row 6 | Col 2: Row 4 | Col 3: Row 7
+Col 4: Row 1 | Col 5: Row 3 | Col 6: Row 5 | Col 7: Row 2
+No two queens share any row, column, or diagonal.
+
+
+====================================================================================================
+EXPERIMENT 10: HILL CLIMBING ALGORITHM
+Source File: Hill_Climbing.py
+====================================================================================================
+Problem Statement:
+Find the maximum of the continuous function f(x) = -(x^2) + 10 using greedy local search.
+
+Input Parameters:
+- Starting point   : 5.0
+- Step size        : 0.5
+- Max iterations   : 20
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Enter the starting value: 5.0
+Enter the step size: 0.5
+Enter maximum iterations: 20
+
+Best Position = 0.0
+Maximum Value = 10.0
+----------------------------------------------------------------------------------------------------
+Analysis:
+The algorithm steps downhill from x = 5.0 toward the peak at x = 0.0, reaching global maximum f(0) = 10.0.
+
+
+====================================================================================================
+EXPERIMENT 11: MINIMAX ALGORITHM
+Source File: Min_Max_Algorithm.py
+====================================================================================================
+Problem Statement:
+Determine the optimal payoff value for the maximizing player at the root of a depth-3 binary game tree.
+
+Input Leaf Values:
+3 5 2 9 12 5 23 23
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Enter 8 leaf node values: 3 5 2 9 12 5 23 23
+The optimal value is: 12
+----------------------------------------------------------------------------------------------------
+Analysis:
+- Depth 2 (Max): max(3,5)=5, max(2,9)=9, max(12,5)=12, max(23,23)=23
+- Depth 1 (Min): min(5,9)=5, min(12,23)=12
+- Depth 0 (Max): max(5,12)=12.
+
+
+====================================================================================================
+EXPERIMENT 12: ALPHA-BETA PRUNING ALGORITHM
+Source File: Alpha_Beta_Pruning_Function.py
+====================================================================================================
+Problem Statement:
+Compute the optimal decision using alpha-beta pruning, eliminating branches that cannot alter
+the final decision.
+
+Input Leaf Values:
+3 5 6 9 1 2 0 -1
+
+Execution Output:
+----------------------------------------------------------------------------------------------------
+Enter 8 leaf node values: 3 5 6 9 1 2 0 -1
+
+Optimal value: 5
+----------------------------------------------------------------------------------------------------
+Analysis:
+During the search of the right subtree, beta evaluates to 2 while alpha from the left subtree is 5.
+Since beta <= alpha (2 <= 5), the remaining branches [0, -1] are pruned, optimizing computation time.
+
+====================================================================================================
+                           END OF EXPERIMENT OUTPUTS RECORD
+====================================================================================================

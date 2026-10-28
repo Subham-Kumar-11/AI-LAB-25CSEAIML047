@@ -45,6 +45,10 @@ def generate_moves(state, blocks):
             if current_position == destination:
                 continue
             
+            #Destination block must be clear
+            if not is_clear(state, destination):
+                continue
+            
             new_state = set(state)
             
             new_state.remove((block, current_position))
@@ -74,10 +78,10 @@ def block_world(initial_state, goal_state, blocks):
         # Generate next states 
         for new_state, move in generate_moves(current_state, blocks): 
             if new_state not in visited:
-                    visited.add(new_state) 
-                    new_path = path + [move]
-                    queue.append((new_state, new_path))
-        return None
+                visited.add(new_state) 
+                new_path = path + [move]
+                queue.append((new_state, new_path))
+    return None
 
 # ---------------- MAIN PROGRAM ---------------- 
 print("===== BLOCK WORLD PROBLEM =====") 

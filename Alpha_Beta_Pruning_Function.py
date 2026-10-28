@@ -4,20 +4,20 @@ def alpha_beta(depth, nodeIndex, maximizingPlayer, values, alpha, beta, height):
         return values[nodeIndex]
 
     if maximizingPlayer:
-        maxEval = -math.inf
+        best = -math.inf
         for i in range(2):
            value = alpha_beta(depth+1, nodeIndex*2+i, False, values, alpha, beta, height)
-           best = max(best,value)
+           best = max(best, value)
            alpha = max(alpha, best)
            
            if beta <= alpha:
                break
         return best
     else:
-        minEval = math.inf
+        best = math.inf
         for i in range(2):
             value = alpha_beta(depth+1, nodeIndex*2+i, True, values, alpha, beta, height)
-            best = min(best,value)
+            best = min(best, value)
             beta = min(beta, best)
             
             if beta <= alpha:

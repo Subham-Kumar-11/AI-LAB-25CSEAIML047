@@ -1,0 +1,39 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: 8-Queens Problem
+File: 8_Queen.py
+Algorithm: Backtracking Search / Constraint Satisfaction Problem (CSP)
+Description: Places eight chess queens on an 8x8 chessboard such that no two
+             queens threaten each other (no two queens share the same row, column,
+             or diagonal).
+================================================================================
+
+--- INPUT ---
+Default 8x8 Chessboard initialization.
+
+--- EXECUTION OUTPUT ---
+Solution for 8-Queens Problem:
+
+Q . . . . . . .
+. . . . Q . . .
+. . . . . . . Q
+. . . . . Q . .
+. . Q . . . . .
+. . . . . . Q .
+. Q . . . . . .
+. . . Q . . . .
+
+================================================================================
+Queen Positions (Row, Column 0-indexed):
+Row 0: Column 0
+Row 1: Column 4
+Row 2: Column 7
+Row 3: Column 5
+Row 4: Column 2
+Row 5: Column 6
+Row 6: Column 1
+Row 7: Column 3
+
+Validation: Every queen is safe from row, column, and diagonal attacks.
+================================================================================

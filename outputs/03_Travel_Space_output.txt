@@ -1,0 +1,41 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Travelling Salesperson Problem (TSP)
+File: Travel_Space.py
+Algorithm: Brute Force Search / Permutation Search
+Description: Finding the optimal tour that visits all cities exactly once and
+             returns to the starting city with minimal total travel cost.
+================================================================================
+
+--- INPUT DATA ---
+Number of cities: 4
+Cost Matrix (Distance Matrix):
+   City 0  City 1  City 2  City 3
+0    0       10      15      20
+1   10        0      35      25
+2   15       35       0      30
+3   20       25      30       0
+
+Starting City: 0
+
+--- EXECUTION OUTPUT ---
+Enter the number of cities: 4
+Enter the cost matrix: 
+0 10 15 20
+10 0 35 25
+15 35 0 30
+20 25 30 0
+Enter the starting city (0 to 3): 0
+
+Optimal path: 0->1->3->2->0
+Optimal cost: 80
+
+================================================================================
+Cost Breakdown:
+Edge (0 -> 1): 10
+Edge (1 -> 3): 25
+Edge (3 -> 2): 30
+Edge (2 -> 0): 15
+Total Cost   : 10 + 25 + 30 + 15 = 80
+================================================================================

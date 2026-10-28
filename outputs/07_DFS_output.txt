@@ -1,0 +1,45 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Depth-First Search (DFS)
+File: DFS.py
+Algorithm: Uninformed Graph Search using LIFO Stack
+Description: Explores as far as possible along each branch before backtracking,
+             using a stack data structure.
+================================================================================
+
+--- INPUT DATA ---
+Number of edges: 5
+Undirected Edges:
+  A - B
+  A - C
+  B - D
+  B - E
+  C - F
+
+Starting Node: A
+
+--- EXECUTION OUTPUT ---
+---Build Your Graph---
+How many edges (connection) does your graph has ? 5
+Enter each edge separated by a spacce(e.g., A B):
+Edge 1: A B
+Edge 2: A C
+Edge 3: B D
+Edge 4: B E
+Edge 5: C F
+Enter the starting node for DFS: A
+
+Your Graph Dictionary: {'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'], 'D': ['B'], 'E': ['B'], 'F': ['C']}
+Staring DFS Traversal...
+Exploring node1: A
+Exploring node1: C
+Exploring node1: F
+Exploring node1: B
+Exploring node1: E
+Exploring node1: D
+DFS traversal order: ['A', 'C', 'F', 'B', 'E', 'D']
+
+================================================================================
+Result: Explored branch A -> C -> F fully, then backtracked to branch B -> E -> D.
+================================================================================

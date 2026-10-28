@@ -1,0 +1,66 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Block World Problem
+File: Block_World_Problem.py
+Algorithm: Breadth-First Search (BFS) in State Space
+Description: Finding the optimal sequence of actions to transform blocks from an
+             initial arrangement to a desired goal configuration following the rule
+             that only a clear block can be moved onto the Table or onto another clear block.
+================================================================================
+
+--- INPUT DATA ---
+Number of blocks: 3
+Block names     : A, B, C
+
+Initial State:
+- A on Table
+- B on Table
+- C on Table
+
+Goal State:
+- A on Table
+- B on A
+- C on B
+
+--- EXECUTION OUTPUT ---
+===== BLOCK WORLD PROBLEM =====
+Enter number of blocks: 3
+
+Enter block names:
+Block 1: A
+Block 2: B
+Block 3: C
+
+===== INITIAL STATE =====
+Enter the position of each block.
+Enter 'Table' if the block is on the table.
+Where is A initially? Table
+Where is B initially? Table
+Where is C initially? Table
+
+===== GOAL STATE =====
+Enter the desired position of each block.
+Where should A be in the goal state? Table
+Where should B be in the goal state? A
+Where should C be in the goal state? B
+
+Initial State:
+A -> Table
+B -> Table
+C -> Table
+
+Goal State:
+A -> Table
+B -> A
+C -> B
+
+===== SOLUTION =====
+Step 1: Move B from Table to A
+Step 2: Move C from Table to B
+
+Total moves: 2
+
+================================================================================
+Result: Successfully rearranged blocks into the target vertical stack (C on B on A).
+================================================================================

@@ -1,0 +1,40 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Alpha-Beta Pruning Algorithm
+File: Alpha_Beta_Pruning_Function.py
+Algorithm: Adversarial Search Optimization (Branch and Bound)
+Description: Optimizes minimax search by maintaining two values:
+             alpha (the best value that the maximizer can guarantee) and
+             beta (the best value that the minimizer can guarantee).
+             Subtrees that cannot affect the final decision are pruned (beta <= alpha).
+================================================================================
+
+--- INPUT DATA ---
+Game Tree Height: 3 (8 leaf nodes)
+Leaf Node Values: 3 5 6 9 1 2 0 -1
+
+--- EXECUTION OUTPUT ---
+Enter 8 leaf node values: 3 5 6 9 1 2 0 -1
+
+Optimal value: 5
+
+================================================================================
+Alpha-Beta Pruning Step-by-Step Analysis:
+- Depth 0 (Root, Maximizing Player): Initial alpha = -inf, beta = +inf
+- Left Subtree (Depth 1, Minimizing Player):
+    - Subtree (Depth 2, Maximizing Player, leaves 3, 5):
+        max(3, 5) = 5
+    - Subtree (Depth 2, Maximizing Player, leaves 6, 9):
+        max(6, 9) = 9
+    - Depth 1 Min Node evaluates: min(5, 9) = 5
+- Depth 0 updates alpha: alpha = max(-inf, 5) = 5
+- Right Subtree (Depth 1, Minimizing Player, beta = +inf, alpha = 5):
+    - Subtree (Depth 2, Maximizing Player, leaves 1, 2):
+        max(1, 2) = 2
+    - Depth 1 Min Node evaluates candidate value 2.
+    - Beta becomes min(+inf, 2) = 2.
+    - Pruning condition triggered: beta (2) <= alpha (5) -> PRUNED!
+    - Leaves [0, -1] are skipped without evaluation.
+- Final Result at Root: Optimal Value = 5
+================================================================================

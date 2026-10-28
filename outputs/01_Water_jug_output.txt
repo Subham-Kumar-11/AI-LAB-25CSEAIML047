@@ -1,0 +1,32 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Water Jug Problem using BFS
+File: Water_jug.py
+Algorithm: Breadth-First Search (BFS) State Space Search
+Description: Finding the shortest sequence of water transfers to reach a target state
+             using two jugs with capacities 4L and 3L to reach (4, 2).
+================================================================================
+
+--- INPUT CONFIGURATION ---
+Jug 1 Capacity : 4 Liters
+Jug 2 Capacity : 3 Liters
+Initial State  : (0, 0)
+Target Goal    : (4, 2)
+
+--- EXECUTION OUTPUT ---
+Steps to reach target state (4, 2):
+(0, 0)
+(0, 3)
+(3, 0)
+(3, 3)
+(4, 2)
+
+================================================================================
+Explanation of State Transitions:
+1. (0, 0) -> Initial state (both jugs empty)
+2. (0, 3) -> Fill 3-liter jug
+3. (3, 0) -> Pour all water from 3L jug into 4L jug
+4. (3, 3) -> Fill 3-liter jug again
+5. (4, 2) -> Pour from 3L jug into 4L jug until 4L jug is full (1L poured, 2L left)
+================================================================================

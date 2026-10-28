@@ -1,0 +1,33 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: Minimax Algorithm
+File: Min_Max_Algorithm.py
+Algorithm: Adversarial Search / Game Theory Decision Rule
+Description: Computes the minimax decision for the root player (Maximizer) in a
+             complete binary game tree of height 3 with 8 terminal leaf nodes.
+================================================================================
+
+--- INPUT DATA ---
+Game Tree Height: 3 (8 leaf nodes)
+Leaf Node Values: 3 5 2 9 12 5 23 23
+
+--- EXECUTION OUTPUT ---
+Enter 8 leaf node values: 3 5 2 9 12 5 23 23
+The optimal value is: 12
+
+================================================================================
+Game Tree Evaluation Steps:
+- Depth 3 (Leaves): [3, 5], [2, 9], [12, 5], [23, 23]
+- Depth 2 (Max):
+    Node (0): max(3, 5) = 5
+    Node (1): max(2, 9) = 9
+    Node (2): max(12, 5) = 12
+    Node (3): max(23, 23) = 23
+- Depth 1 (Min):
+    Node (0): min(5, 9) = 5
+    Node (1): min(12, 23) = 12
+- Depth 0 (Max / Root):
+    max(5, 12) = 12
+Optimal Root Value = 12
+================================================================================

@@ -1,0 +1,67 @@
+================================================================================
+AI LAB EXPERIMENT OUTPUT
+================================================================================
+Experiment: A* Search Algorithm
+File: A-Star.py
+Algorithm: Informed (Heuristic) Best-First Search
+Description: Finds the shortest path between start and goal nodes using evaluation
+             function f(n) = g(n) + h(n), where g(n) is the exact cost from start to n,
+             and h(n) is the estimated heuristic cost from n to goal.
+================================================================================
+
+--- INPUT DATA ---
+Nodes & Heuristic Values h(n):
+  Node S : 7.0
+  Node A : 6.0
+  Node B : 2.0
+  Node C : 1.0
+  Node G : 0.0
+
+Directed Edges (from_node to_node weight):
+  S -> A : 1.0
+  S -> B : 4.0
+  A -> B : 2.0
+  A -> C : 5.0
+  B -> C : 2.0
+  C -> G : 3.0
+
+Start Node: S
+Goal Node : G
+
+--- EXECUTION OUTPUT ---
+=== A* Algorithm Input Setup ===
+
+Enter total number of nodes: 5
+
+Enter Heuristic value h(n) for each node: 
+  Node name:   S
+  Heuristic h(S):    7
+  Node name:   A
+  Heuristic h(A):    6
+  Node name:   B
+  Heuristic h(B):    2
+  Node name:   C
+  Heuristic h(C):    1
+  Node name:   G
+  Heuristic h(G):    0
+
+Enter total number of directed edges: 6
+
+Enter edges in format(from_node to_node weight)
+    Edge 1:    S A 1
+    Edge 2:    S B 4
+    Edge 3:    A B 2
+    Edge 4:    A C 5
+    Edge 5:    B C 2
+    Edge 6:    C G 3
+
+--- Path Finding ---
+Enter Start Node: S
+Enter Goal Node: G
+Shortest Path: S -> A -> B -> C -> G
+Total Path Cost: 8.0
+
+================================================================================
+Path Cost Analysis:
+S -> A (1.0) -> B (2.0) -> C (2.0) -> G (3.0) = 8.0
+================================================================================
